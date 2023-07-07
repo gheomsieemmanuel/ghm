@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="inddex.css">
+    <link rel="stylesheet" href="index.responsive.css">
+    <title>tableau de bord</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+    --white: #fff;
+    --light: #f3f4ee;
+    --fuscha: hsl(334, 94%,57%);
+    --desaturate-fuscha: hsl(334, 94%,57%,0.14);
+    --desaturate-fuscha-2: hsl(334, 94%,57%,0.1);
+    --cyan: hsl(184,46% ,57%);
+    --desaturate-cyan: hsl(184,46%,57%,0.25);
+    --desaturate-cyan-2: hsl(184,46%,57%,0.15);
+    --light-blue:#bbeef1;
+    --pinkless:#fff3e0;
+    --yellow:#f1b813;
+
+    --text-color-primary:#314657;
+    --text-color-secondary:#58626e;
+    --text-color-third:#9db3be;
+
+    --box-shadow-card: 8px 8px 32px var(--desaturate-fuscha);
+    --bos-shadow-card-2: 8px 8px 32px var(--desaturate-cyan);
+    --box-sidebar: 2px 4px 16px var(--desaturate-cyan-2);
+
+    --padding-card: 28px;
+    --border-radius-rounded: 50%;
+    --border-radius-4: 4px;
+    --border-radius-8: 8px;
+    --border-radius-12 : 12px;
+    --border-radius-card: var(--padding-card);
+
+}
+.dark-mode {
+    --white : #393e46;
+    --light: #222831;
+    --desaturate-fuscha: hsla(334, 8%, 67%, 0.15);
+
+    --text-color-primary: #eee;
+    --text-color-secondary: #eee;
+
+
+    --box-shadow-card: 8px 8px 32px var(--desaturate-fuscha);
+    --box-shadow-card-2: 8px 8px 32px var(--desaturate-cyan);
+}
+
+*, *::after, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'nunito' , sans-serif;
+}
+
+html {
+    font-size: 14px;
+}
+body{
+    background-color: var(--light);
+    color:var(--text-color-primary);
+    height: 10vh;
+    transition: background-color 0.2s ease-in-out , color 0.2s ease-in-out;
+} 
+
+ul{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--text-color-secondary);
+    transition: color 0.2 ease-in-out;
+}
+a:hover{
+  color: var(--text-color-primary) ; 
+}
+.material-icons-sharp {
+    vertical-align: middle ;
+}
+.text-primary {
+    color: var(--text-color-primary) ;      
+}
+.text-secondary {
+    color: var(--text-color-primary) ;      
+}
+.text-third {
+    color: var(--text-decoration-third);
+} 
+
+.dashbord-container{
+    display: grid;
+    grid-template-columns: 2fr 7fr 3fr;
+    grid-template-areas: 'sidebar main extrabar';
+    gap: 4rem;
+    height: 100%;
+}
+
+.main-sidebar {
+grid-area: sidebar ; 
+height: 100px;
+width: 320px;
+padding: 20px 0 20px 16px;
+}
+
+.main-sidebar .aside-header{
+    display: flex;
+    justify-content: space-between ;
+   align-items: center; 
+}
+
+ .aside-header .brand {
+    align-items: center;
+    display: flex;
+    padding-left: 4rem;
+ }
+
+ .brand img {
+    width: 48px;
+    height: 48px;
+ }
+
+ .brand h3{
+   font-size: 24px;
+   text-transform: uppercase; 
+ }
+
+ .main-sidebar .sidebar{
+    position: relative;
+    display:flex ;
+    justify-content: center;
+    height: 100%;
+    padding-top: 4rem;
+    width: 100%;
+ }
+
+ .sidebar .list-item{
+    width: 100%;
+
+ }
+
+ .list-item li:last-child{
+    position: absolute;
+    bottom: 4rem;
+    width: 100%;
+ }
+.list-items .item a{
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 12px;
+   width: 100px;
+   padding: 16px 4rem 16px;
+   font-size: 1.2rem;
+   font-weight: 600;
+   transition: all .3s ease-in-out;
+}
+ .list-items .item a:hover {
+    transform: translateX(5);
+ } 
+ 
+.main-container {
+    grid-area: main;
+}
+
+.extrabar{
+    grid-area: extrabar;
+}
+</style>
+</head>
+<body>
+    <div class="dashbord-container">
+        <div class="main-sidebar">
+            <div class="aside-header">
+                <div class="brand">
+                    <img src="c:\Users\LYATECH-PRO\Downloads\HGOPED.png" alt="">
+                    <h3>HGOPED</h3>
+                </div>
+                
+                <div class="sidebar">
+                    <ul class="list-item">
+                        <li class="item">
+                            <a href="#">
+                                <span class="material-icons-sharp">
+                                    dashboard
+                                    </span>
+                                <span>tableau de bord</span>                       
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <span class="material-icons-sharp">
+                                    dashboard
+                                    </span>
+                                <span>tableau de bord</span>                       
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <span class="material-icons-sharp">
+                                    dashboard
+                                    </span>
+                                <span>tableau de bord</span>                       
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <span class="material-icons-sharp">
+                                    dashboard
+                                    </span>
+                                <span>tableau de bord</span>                       
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <span class="material-icons-sharp">
+                                    textsms
+                                    </span>
+                                <span>messagerie</span>   
+                                <span class="message-count">22</span>                    
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <span class="material-icons-sharp">
+                                    dashboard
+                                    </span>
+                                <span>tableau de bord</span>                       
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <span class="material-icons-sharp">
+                                    logout
+                                    </span>
+                                <span>déconnexion</span>                       
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-container"></div>
+        <div class="extrabar"></div>
+    </div>
+
+
+    <script src="index.js"></script>  
+</body>
+</html>
